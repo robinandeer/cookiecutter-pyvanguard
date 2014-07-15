@@ -1,11 +1,12 @@
 {
-	"full_name": "Audrey Roy",
-	"email": "audreyr@gmail.com",
-	"github_username": "audreyr",
-	"project_name": "Python Boilerplate",
-	"repo_name": "boilerplate",
-	"project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-	"release_date": "2014-01-11",
+	"full_name": "Robin Andeer",
+	"email": "robin.andeer@company.com",
+  "website": "http://www.robinandeer.com/",
+	"github_username": "robinandeer",
+  "repo_name": "vanguard",
+	"project_name": "Vanguard Boilerplate",
+	"description": "Vanguard contains all the boilerplate you need to bootstrap a modern Python package.",
+	"release_date": "2014-07-08",
 	"year": "2014",
-	"version": "0.1.0"
+	"version": "0.0.1"
 }
