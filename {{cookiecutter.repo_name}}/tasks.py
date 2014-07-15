@@ -17,9 +17,9 @@ def clean():
   run('rm -rf dist/')
   run('rm -rf {{ cookiecutter.repo_name }}.egg-info')
   run('find . -name __pycache__ -delete')
-  run("find . -name '*.pyc' -delete")
-  run("find . -name '*.pyo' -delete")
-  run("find . -name '*~' -delete")
+  run('find . -name *.pyc -delete')
+  run('find . -name *.pyo -delete')
+  run('find . -name *~ -delete')
   print('Cleaned up.')
 
 
