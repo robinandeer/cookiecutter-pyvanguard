@@ -1,5 +1,4 @@
-# cookiecutter-pyvanguard
-
+# cookiecutter-pyvanguard (WIP)
 Cookiecutter template for bleeding edge Python development. See [@audreyr/cookiecutter][cookiecutter].
 
 The template aspires adoption of new and exiting developer tools. Focus is on automation and keeping your repo DRY. Whenever justifiable, new and Python-native is preferred over "tried and true".
@@ -25,7 +24,7 @@ Embrace conventions. Don't fret details when you don't have to. Make it easy for
 Level out inconsistencies between platforms. Virtualize. Simplify development. Inspire experimentation.
 
 - [conda][conda] as an optional, improved "virtualenv" replacement
-- [Vagrant][vagrant] to define and share development environments
+- [Vagrant][vagrant] to define and share development environments (coming)
 
 ### Python 2 vs. 3
 Python 2.7.x isn't bleeding edge but it would be crazy to not officially support it. The compromise is developing for Python 3 first and ensure backwards compatability through a lightweight ``compat.py`` module.
