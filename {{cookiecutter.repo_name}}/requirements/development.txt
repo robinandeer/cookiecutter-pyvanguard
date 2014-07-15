@@ -1,7 +1,7 @@
 -r ../requirements.txt
+-r test.txt
 
 bumpversion
 flake8
 invoke
-pytest
 wheel>=0.23.0
