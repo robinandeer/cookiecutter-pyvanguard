@@ -1,0 +1,2 @@
+# conda installables
+setuptools
