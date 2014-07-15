@@ -1,16 +1,16 @@
-# cookiecutter-pyvanguard (WIP)
+![Header logo](artwork/header@2x.png)
+
 Cookiecutter template for bleeding edge Python development. See [@audreyr/cookiecutter][cookiecutter].
 
 The template aspires adoption of new and exiting developer tools. Focus is on automation and keeping your repo DRY. Whenever justifiable, new and Python-native is preferred over "tried and true".
 
-## Features
 ### Automation
 Automate everything. Banish tedious tasks. Ensure reproducibility. Minimize errors.
 
 - [pytest][pytest] for test discovery and automation
 - [Travis][travis] for continuous integration
 - [bumpversion][bumpversion] for updating version numbers with *one* command
-- [Invoke][invoke] for task execution, a Python-native Make replacement
+- [Invoke][invoke] for task execution as a Python-native Make replacement
 
 ### Standardization
 Embrace conventions. Don't fret details when you don't have to. Make it easy for others to help you out.
@@ -44,7 +44,7 @@ Then:
 * Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
 * Release your package the standard Python way. Here's a release checklist: https://gist.github.com/audreyr/5990987
 
-## Not feeling adventurous today?
+## Not feeling adventurous?
 Don't worry, you have options; fork, remix, and pull requests!
 
 ### Similar Cookiecutter Templates
@@ -77,6 +77,7 @@ make my own packaging experience better.
 [editorconfig]: http://editorconfig.org/
 [family-tree]: https://github.com/robinandeer/cookiecutter-pyvanguard/network/members
 [github-comparison]: https://github.com/tony/cookiecutter-pypackage/compare/robinandeer:master...master
+[inspiration]: http://thenounproject.com/term/cutting-edge/14935/
 [invoke]: http://invoke.readthedocs.org/en/latest/
 [nekroze]: https://github.com/Nekroze/cookiecutter-pypackage
 [network]: https://github.com/robinandeer/cookiecutter-pyvanguard/network
