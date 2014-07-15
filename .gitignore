@@ -1,7 +1,7 @@
-*.py[cod]
-
 # Mac OSX hidden files
 .DS_Store
+
+*.py[cod]
 
 # C extensions
 *.so

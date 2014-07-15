@@ -1,3 +1,7 @@
+# Mac OSX hidden files
+.DS_Store
+
+# Temporary files
 *.py[cod]
 
 # C extensions
@@ -34,10 +38,19 @@ htmlcov
 .mr.developer.cfg
 .project
 .pydevproject
+.env
+TRASH*
+
+# SublimeText: workspace files are user-specific
+*.sublime-workspace
+
+# project files should be version controlled, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
 
 # Complexity
 output/*.html
 output/*/index.html
 
-# Sphinx
+# Sphinx docs
 docs/_build
