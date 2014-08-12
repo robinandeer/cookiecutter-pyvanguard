@@ -11,6 +11,7 @@ Automate everything. Banish tedious tasks. Ensure reproducibility. Minimize erro
 - [Travis][travis] for continuous integration
 - [bumpversion][bumpversion] for updating version numbers with *one* command
 - [Invoke][invoke] for task execution as a Python-native Make replacement
+- [Coveralls.io][coveralls] for integrating test coverage with GitHub 
 
 ### Standardization
 Embrace conventions. Don't fret details when you don't have to. Make it easy for others to help you out.
@@ -19,15 +20,16 @@ Embrace conventions. Don't fret details when you don't have to. Make it easy for
 - [EditorConfig][editorconfig] for maintaing consistent coding styles
 - [wheel][wheel] for the future standard in Python packaging
 - Sensible conventions with first class GitHub support like ``CONTRIBUTORS.md``
+- Let setuptools generate virutal scripts for you by deep linking into your package (see ``setup.py`` for more details)
 
 ### Comparmentalization
 Level out inconsistencies between platforms. Virtualize. Simplify development. Inspire experimentation.
 
 - [conda][conda] as an optional, improved "virtualenv" replacement
-- [Vagrant][vagrant] to define and share development environments (coming)
+- [Vagrant][vagrant] to define and share development environments, provisioned by [Ansible][ansible].
 
 ### Python 2 vs. 3
-Python 2.7.x isn't bleeding edge but it would be crazy to not officially support it. The compromise is developing for Python 3 first and ensure backwards compatability through a lightweight ``compat.py`` module.
+Python 2.7.x isn't bleeding edge but it would be crazy to not officially support it. The compromise is developing for Python 3 first and ensure backwards compatability through a lightweight ``_compat.py`` module.
 
 
 ## Usage
@@ -41,8 +43,9 @@ Then:
 
 * Create a repo and put it there.
 * Add the repo to your Travis CI account.
-* Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
+* Sign up and activate your repo at [coveralls.io][coveralls].
 * Release your package the standard Python way. Here's a release checklist: https://gist.github.com/audreyr/5990987
+
 
 ## Not feeling adventurous?
 Don't worry, you have options; fork, remix, and pull requests!
@@ -67,13 +70,14 @@ be a fork.
   you think sounds good.
 
 ### Or Submit a Pull Request
-I also accept pull requests on this, if they're small, atomic, and if they
-make my own packaging experience better.
+I also accept pull requests on this repository provided they are small, atomic, and if they make the overall packaging experience better.
 
 
+[ansible]: http://www.ansible.com/home
 [bumpversion]: https://github.com/peritus/bumpversion
 [conda]: http://conda.pydata.org/docs/
 [cookiecutter]: https://github.com/audreyr/cookiecutter
+[coveralls]: https://coveralls.io/
 [editorconfig]: http://editorconfig.org/
 [family-tree]: https://github.com/robinandeer/cookiecutter-pyvanguard/network/members
 [github-comparison]: https://github.com/tony/cookiecutter-pypackage/compare/robinandeer:master...master
