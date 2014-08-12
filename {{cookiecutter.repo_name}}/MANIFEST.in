@@ -4,7 +4,6 @@ include HISTORY.md
 include LICENSE
 include README.md
 
-include {{cookiecutter.repo_name}}/VERSION
 include requirements.txt
 recursive-include requirements *
 

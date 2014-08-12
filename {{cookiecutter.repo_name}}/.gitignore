@@ -3,6 +3,7 @@
 
 # Temporary files
 *.py[cod]
+__pycache__
 
 # C extensions
 *.so
@@ -40,6 +41,8 @@ htmlcov
 .pydevproject
 .env
 TRASH*
+*.tar.gz
+.vagrant
 
 # SublimeText: workspace files are user-specific
 *.sublime-workspace
