@@ -1,19 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""The main entry point. Invoke as `{{ cookiecutter.repo_name }}' or
-`python -m {{ cookiecutter.repo_name }}'.
+"""
+chanjo.__main__
+~~~~~~~~~~~~~~~~
+
+The main entry point for the command line interface.
+
+Invoke as ``{{ cookiecutter.repo_name }}`` (if installed)
+or ``python -m {{ cookiecutter.repo_name }}`` (no install required).
 """
 from __future__ import absolute_import, unicode_literals
 import sys
 
 
 def cli():
-  """Add something useful to this function or import another version
-  of it from a submodule.
-  """
-  print('{{ cookiecutter.project_name }} CLI not implemented yet')
+  """Add some useful functionality here or import from a submodule."""
+  raise NotImplementedError('{{ cookiecutter.project_name }} CLI not implemented yet')
 
 
 if __name__ == '__main__':
-  # Exit using whatever exit code the CLI returned
+  # exit using whatever exit code the CLI returned
   sys.exit(cli())

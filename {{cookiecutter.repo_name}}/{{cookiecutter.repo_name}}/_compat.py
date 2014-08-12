@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
+"""
+chanjo._compat
+~~~~~~~~~~~~~~~
 
+Python 2.7.x, 3.2+ compatability module.
+"""
+from __future__ import absolute_import
 import operator
 import sys
 
@@ -9,6 +14,8 @@ is_py2 = sys.version_info[0] == 2
 
 if not is_py2:
   # Python 3
+  zip = zip
+  range = range
 
   # strings and ints
   unichr = chr
