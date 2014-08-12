@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-chanjo._compat
+{{ cookiecutter.repo_name }}._compat
 ~~~~~~~~~~~~~~~
 
 Python 2.7.x, 3.2+ compatability module.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-chanjo.__main__
+{{ cookiecutter.repo_name }}.__main__
 ~~~~~~~~~~~~~~~~
 
 The main entry point for the command line interface.
