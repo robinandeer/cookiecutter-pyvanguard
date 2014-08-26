@@ -10,8 +10,6 @@ from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 import sys
 
-import {{ cookiecutter.repo_name }}
-
 # Shortcut for building/publishing to Pypi
 if sys.argv[-1] == 'publish':
   os.system('python setup.py sdist bdist_wheel upload')
@@ -43,23 +41,23 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 
 setup(
-  name={{ cookiecutter.repo_name }}.__title__,
+  name='{{ cookiecutter.repo_name }}',
 
   # Versions should comply with PEP440. For a discussion on
   # single-sourcing the version across setup.py and the project code,
   # see http://packaging.python.org/en/latest/tutorial.html#version
-  version={{ cookiecutter.repo_name }}.__version__,
+  version='{{ cookiecutter.version }}',
 
-  description={{ cookiecutter.repo_name }}.__summary__,
+  description='{{ cookiecutter.description }}',
   long_description=long_description,
   # What does your project relate to? Separate with spaces.
   keywords='{{ cookiecutter.repo_name }} development',
-  author={{ cookiecutter.repo_name }}.__author__,
-  author_email={{ cookiecutter.repo_name }}.__email__,
-  license={{ cookiecutter.repo_name }}.__license__,
+  author='{{ cookiecutter.full_name }}',
+  author_email='{{ cookiecutter.email }}',
+  license='MIT',
 
   # The project's main homepage
-  url={{ cookiecutter.repo_name }}.__uri__,
+  url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
 
   packages=find_packages(exclude=('tests*', 'docs', 'examples')),
 

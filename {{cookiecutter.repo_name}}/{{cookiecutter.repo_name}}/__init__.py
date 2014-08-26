@@ -10,11 +10,6 @@
 """
 from __future__ import absolute_import, unicode_literals
 
-__all__ = [
-  '__title__', '__summary__', '__uri__', '__version__', '__author__',
-  '__email__', '__license__', '__copyright__'
-]
-
 # Generate your own AsciiArt at:
 # patorjk.com/software/taag/#f=Calvin%20S&t={{ cookiecutter.project_name }}
 __banner__ = r"""
