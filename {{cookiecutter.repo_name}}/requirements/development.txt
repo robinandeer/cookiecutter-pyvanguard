@@ -1,7 +1,11 @@
 -r ../requirements.txt
--r test.txt
 
 bumpversion
+coverage
+coveralls
 flake8
 invoke
+pytest
+sphinx
+sphinxcontrib-napoleon
 wheel>=0.23.0

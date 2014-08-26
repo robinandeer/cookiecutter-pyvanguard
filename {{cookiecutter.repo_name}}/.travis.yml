@@ -9,15 +9,14 @@ python:
 
 install:
   # install dependencies
-  - pip install -r requirements/development.txt --use-mirrors
-  - pip install coveralls
+  - pip install -r requirements/development.txt
 
   # install your own package + executables
   - pip install --editable .
 
 script:
   # command to run tests and collect test coverage
-  - coverage run --source chanjo setup.py test
+  - coverage run --source {{ cookiecutter.repo_name }} setup.py test
 
 after_success:
   coveralls
