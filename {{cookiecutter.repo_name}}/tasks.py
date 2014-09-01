@@ -52,7 +52,7 @@ def coverage():
 @task(clean)
 def publish():
   """publish - package and upload a release to the cheeseshop."""
-  run('python setup.py sdist upload')
-  run('python setup.py bdist_wheel upload')
+  run('python setup.py sdist upload', pty=True)
+  run('python setup.py bdist_wheel upload', pty=True)
 
   log.info('published new release')
