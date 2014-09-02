@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-{{ cookiecutter.repo_name }}.__main__
-~~~~~~~~~~~~~~~~
+{{ cookiecutter.repo_name|replace('-', '_') }}.__main__
+~~~~~~~~~~~~~~~~~~~~~
 
 The main entry point for the command line interface.
 
-Invoke as ``{{ cookiecutter.repo_name }}`` (if installed)
+Invoke as ``{{ cookiecutter.repo_name|replace('-', '_') }}`` (if installed)
 or ``python -m {{ cookiecutter.repo_name }}`` (no install required).
 """
 from __future__ import absolute_import, unicode_literals

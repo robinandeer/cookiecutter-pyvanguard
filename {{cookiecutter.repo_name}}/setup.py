@@ -91,7 +91,7 @@ setup(
   # target platform.
   entry_points=dict(
     console_scripts=[
-      '{{ cookiecutter.repo_name }} = {{ cookiecutter.repo_name }}.__main__:cli',
+      '{{ cookiecutter.repo_name }} = {{ cookiecutter.repo_name|replace('-', '_') }}.__main__:cli',
     ],
   ),
 

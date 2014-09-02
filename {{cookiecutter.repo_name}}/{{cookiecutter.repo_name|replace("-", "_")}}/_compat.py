@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-{{ cookiecutter.repo_name }}._compat
-~~~~~~~~~~~~~~~
+{{ cookiecutter.repo_name|replace('-', '_') }}._compat
+~~~~~~~~~~~~~~~~~~~~
 
 Python 2.7.x, 3.2+ compatability module.
 """

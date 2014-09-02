@@ -23,7 +23,7 @@ def clean():
   """clean - remove build artifacts."""
   run('rm -rf build/')
   run('rm -rf dist/')
-  run('rm -rf {{ cookiecutter.repo_name }}.egg-info')
+  run('rm -rf {{ cookiecutter.repo_name|replace('-', '_') }}.egg-info')
   run('find . -name __pycache__ -delete')
   run('find . -name *.pyc -delete')
   run('find . -name *.pyo -delete')
@@ -35,13 +35,13 @@ def clean():
 @task
 def lint():
   """lint - check style with flake8."""
-  run('flake8 {{ cookiecutter.repo_name }} tests')
+  run('flake8 {{ cookiecutter.repo_name|replace('-', '_') }} tests')
 
 
 @task
 def coverage():
   """coverage - check code coverage quickly with the default Python."""
-  run('coverage run --source {{ cookiecutter.repo_name }} setup.py test')
+  run('coverage run --source {{ cookiecutter.repo_name|replace('-', '_') }} setup.py test')
   run('coverage report -m')
   run('coverage html')
   run('open htmlcov/index.html')

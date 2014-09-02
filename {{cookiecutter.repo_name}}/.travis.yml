@@ -16,7 +16,7 @@ install:
 
 script:
   # command to run tests and collect test coverage
-  - coverage run --source {{ cookiecutter.repo_name }} setup.py test
+  - coverage run --source {{ cookiecutter.repo_name|replace('-', '_') }} setup.py test
 
 after_success:
   coveralls

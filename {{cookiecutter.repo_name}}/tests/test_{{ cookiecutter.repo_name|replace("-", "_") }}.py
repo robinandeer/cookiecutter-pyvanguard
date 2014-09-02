@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-test_{{ cookiecutter.repo_name }}
+test_{{ cookiecutter.repo_name|replace('-', '_') }}
 ----------------------------------
 
-Tests for `{{ cookiecutter.repo_name }}` module.
+Tests for `{{ cookiecutter.repo_name|replace('-', '_') }}` module.
 """
 import pytest
-import {{ cookiecutter.repo_name }}
+import {{ cookiecutter.repo_name|replace('-', '_') }}
 
 
 class Test{{ cookiecutter.repo_name|capitalize }}(object):

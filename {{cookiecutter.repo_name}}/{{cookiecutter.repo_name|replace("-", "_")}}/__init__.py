@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-{{ cookiecutter.repo_name }}
-~~~~~~~~~~~~~
+{{ cookiecutter.repo_name|replace('-', '_') }}
+~~~~~~~~~~~~~~~~~~~
 
 {{ cookiecutter.description }}
 
