@@ -14,10 +14,10 @@ import sys
 
 
 def cli():
-  """Add some useful functionality here or import from a submodule."""
-  raise NotImplementedError('{{ cookiecutter.project_name }} CLI not implemented yet')
+    """Add some useful functionality here or import from a submodule."""
+    raise NotImplementedError('{{ cookiecutter.project_name }} CLI not implemented yet')
 
 
 if __name__ == '__main__':
-  # exit using whatever exit code the CLI returned
-  sys.exit(cli())
+    # exit using whatever exit code the CLI returned
+    sys.exit(cli())
