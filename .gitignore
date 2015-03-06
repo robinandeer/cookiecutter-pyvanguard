@@ -36,6 +36,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+.vagrant/
 
 # Complexity
 output/*.html
