@@ -2,21 +2,21 @@
 language: python
 
 python:
-  - "3.4"
-  - "3.3"
-  - "2.7"
-  - "pypy"
+    - "3.4"
+    - "3.3"
+    - "2.7"
+    - "pypy"
 
 install:
-  # install dependencies
-  - pip install -r requirements/development.txt
+    # install dependencies
+    - pip install -r requirements/development.txt
 
-  # install your own package + executables
-  - pip install --editable .
+    # install your own package + executables
+    - pip install --editable .
 
 script:
-  # command to run tests and collect test coverage
-  - coverage run --source {{ cookiecutter.repo_name|replace('-', '_') }} setup.py test
+    # command to run tests and collect test coverage
+    - coverage run --source {{ cookiecutter.repo_name|replace('-', '_') }} setup.py test
 
 after_success:
-  coveralls
+    coveralls
