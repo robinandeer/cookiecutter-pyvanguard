@@ -3,9 +3,10 @@
 bumpversion
 coverage
 coveralls
-flake8
 invoke
 pytest
+pytest-cov
+pytest-flakes
 sphinx
 sphinxcontrib-napoleon
 wheel>=0.23.0

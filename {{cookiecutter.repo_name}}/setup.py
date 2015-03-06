@@ -5,34 +5,21 @@ from __future__ import unicode_literals
 # To use a consistent encoding
 from codecs import open
 import os
+import sys
+
+from pip.req import parse_requirements
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
-import sys
 
 # Shortcut for building/publishing to Pypi
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist bdist_wheel upload')
     sys.exit()
 
-
-# This is a plug-in for setuptools that will invoke py.test
-# when you run python setup.py test
-class PyTest(TestCommand):
-
-    """Set up the py.test test runner."""
-
-    def finalize_options(self):
-        """Set options for the command line."""
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        """Execute the test runner command."""
-        # Import here, because outside the required eggs aren't loaded yet
-        import pytest
-        sys.exit(pytest.main(self.test_args))
+# ``parse_requirements`` yields ``pip.req.InstallRequirement`` objects
+install_requirements = parse_requirements('./requirements.txt')
+# "requirements" is a list of requirement
+requirements = [str(requirement.req) for requirement in install_requirements]
 
 # Get the long description from the relevant file
 here = os.path.abspath(os.path.dirname(__file__))
@@ -69,21 +56,8 @@ setup(
         '': ['README.md', 'LICENSE', 'AUTHORS'],
     },
 
-    # Although 'package_data' is the preferred approach, in some case you
-    # may need to place data files outside of your packages.
-    # In this case, 'data_file' will be installed into:
-    # '<sys.prefix>/my_data'
-    # data_files=[('my_data', ['data/data_file'])],
-
-    install_requires=[
-        'setuptools',
-    ],
-    tests_require=[
-        'pytest',
-    ],
-    cmdclass=dict(
-        test=PyTest,
-    ),
+    # Install requirements loaded from ``requirements.txt``
+    install_requires=requirements,
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and
