@@ -59,6 +59,8 @@ setup(
     # Install requirements loaded from ``requirements.txt``
     install_requires=requirements,
 
+    test_suite='tests',
+
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and
     # allow pip to create the appropriate form of executable for the

@@ -16,7 +16,6 @@ Automate everything. Banish tedious tasks. Ensure reproducibility. Minimize erro
 ### Standardization
 Embrace conventions. Don't fret details when you don't have to. Make it easy for others to help you out.
 
-- [Tox][tox] for test standardization and automation
 - [EditorConfig][editorconfig] for maintaing consistent coding styles
 - [wheel][wheel] for the future standard in Python packaging
 - Sensible conventions with first class GitHub support like ``CONTRIBUTORS.md``
@@ -87,7 +86,6 @@ I also accept pull requests on this repository provided they are small, atomic, 
 [network]: https://github.com/robinandeer/cookiecutter-pyvanguard/network
 [pytest]: http://pytest.org/latest/
 [tony]: https://github.com/tony/cookiecutter-pypackage
-[tox]: http://tox.readthedocs.org/en/latest/
 [travis]: https://travis-ci.org/
 [vagrant]: http://www.vagrantup.com/
 [wheel]: http://wheel.readthedocs.org/en/latest/

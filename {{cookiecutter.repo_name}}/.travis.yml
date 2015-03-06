@@ -16,7 +16,10 @@ install:
 
 script:
     # command to run tests and collect test coverage
-    - coverage run --source {{ cookiecutter.repo_name|replace('-', '_') }} setup.py test
+    - py.test --flakes --cov-report html --cov {{ cookiecutter.repo_name|replace('-', '_') }} tests/
+
+notifications:
+    email: false
 
 after_success:
     coveralls
