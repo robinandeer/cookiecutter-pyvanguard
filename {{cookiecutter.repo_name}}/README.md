@@ -15,7 +15,7 @@ $ pip install --editable .
 
 
 ## Contributing
-Anyone can help make this project better - read [CONTRIBUTION][CONTRIBUTION.md] to get started!
+Anyone can help make this project better - read [CONTRIBUTING](CONTRIBUTING.md) to get started!
 
 
 ## License

@@ -18,7 +18,7 @@ Embrace conventions. Don't fret details when you don't have to. Make it easy for
 
 - [EditorConfig][editorconfig] for maintaing consistent coding styles
 - [wheel][wheel] for the future standard in Python packaging
-- Sensible conventions with first class GitHub support like ``CONTRIBUTORS.md``
+- Sensible conventions with first class GitHub support like ``CONTRIBUTING.md``
 - Let setuptools generate virutal scripts for you by deep linking into your package (see ``setup.py`` for more details)
 
 ### Comparmentalization
