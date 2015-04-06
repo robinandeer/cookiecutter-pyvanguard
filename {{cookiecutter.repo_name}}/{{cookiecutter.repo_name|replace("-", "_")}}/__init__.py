@@ -9,6 +9,7 @@
 :licence: MIT, see LICENCE for more details
 """
 from __future__ import absolute_import, unicode_literals
+import logging
 
 # Generate your own AsciiArt at:
 # patorjk.com/software/taag/#f=Calvin%20S&t={{ cookiecutter.project_name }}
@@ -29,3 +30,6 @@ __email__ = '{{ cookiecutter.email }}'
 
 __license__ = 'MIT'
 __copyright__ = 'Copyright {{ cookiecutter.year }} {{ cookiecutter.full_name }}'
+
+# the user should dictate what happens when a logging event occurs
+logging.getLogger(__name__).addHandler(logging.NullHandler())
