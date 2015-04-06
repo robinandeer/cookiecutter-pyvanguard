@@ -10,6 +10,8 @@
 ## Install for development
 
 ```bash
+$ git clone git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+$ cd {{ cookiecutter.repo_name }}
 $ pip install --editable .
 ```
 
