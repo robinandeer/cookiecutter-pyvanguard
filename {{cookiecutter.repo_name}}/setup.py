@@ -3,22 +3,47 @@
 """Based on https://github.com/pypa/sampleproject/blob/master/setup.py."""
 from __future__ import unicode_literals
 # To use a consistent encoding
-from codecs import open
+import codecs
 import os
-import sys
-
-# Always prefer setuptools over distutils
 from setuptools import setup, find_packages
+import sys
 
 # Shortcut for building/publishing to Pypi
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist bdist_wheel upload')
     sys.exit()
 
-# Get the long description from the relevant file
-here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+
+def parse_reqs(req_path='./requirements.txt'):
+    """Recursively parse requirements from nested pip files."""
+    install_requires = []
+    with codecs.open(req_path, 'r') as handle:
+        # remove comments and empty lines
+        lines = (line.strip() for line in handle
+                 if line.strip() and not line.startswith('#'))
+
+        for line in lines:
+            # check for nested requirements files
+            if line.startswith('-r'):
+                # recursively call this function
+                install_requires += parse_reqs(req_path=line[3:])
+
+            else:
+                # add the line as a new requirement
+                install_requires.append(line)
+
+    return install_requires
+
+
+def parse_readme():
+    """Parse contents of the README."""
+    # Get the long description from the relevant file
+    here = os.path.abspath(os.path.dirname(__file__))
+    readme_path = os.path.join(here, 'README.md')
+    with codecs.open(readme_path, encoding='utf-8') as handle:
+        long_description = handle.read()
+
+    return long_description
 
 
 setup(
@@ -30,7 +55,7 @@ setup(
     version='{{ cookiecutter.version }}',
 
     description='{{ cookiecutter.description }}',
-    long_description=long_description,
+    long_description=parse_readme(),
     # What does your project relate to? Separate with spaces.
     keywords='{{ cookiecutter.repo_name }} development',
     author='{{ cookiecutter.full_name }}',
@@ -46,14 +71,9 @@ setup(
     # installed, specify them here.
     include_package_data=True,
     zip_safe=False,
-    package_data={
-        '': ['README.md', 'LICENSE', 'AUTHORS'],
-    },
 
     # Install requirements loaded from ``requirements.txt``
-    install_requires=[
-        'setuptools',
-    ],
+    install_requires=parse_reqs(),
 
     test_suite='tests',
 
