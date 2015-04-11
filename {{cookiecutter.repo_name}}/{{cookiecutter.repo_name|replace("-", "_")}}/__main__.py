@@ -13,7 +13,7 @@ from __future__ import absolute_import, unicode_literals
 import logging
 import sys
 
-from .log import configure_stream
+from {{ cookiecutter.repo_name|replace("-", "_") }}.log import configure_stream
 
 logger = logging.getLogger(__name__)
 
