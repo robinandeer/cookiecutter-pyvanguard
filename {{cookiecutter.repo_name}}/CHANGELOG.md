@@ -6,7 +6,7 @@ This document follows the conventions laid out in [Keep a CHANGELOG][keep].
 
 ## [{{ cookiecutter.version }}] - {{ cookiecutter.release_date }}
 ### Added
-* First release on PyPI.
+* Project skeleton using "cookiecutter-pyvanguard"
 
 
 [keep]: http://keepachangelog.com/
