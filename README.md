@@ -2,7 +2,7 @@
 
 Cookiecutter template for bleeding edge Python development. See [@audreyr/cookiecutter][cookiecutter].
 
-The template aspires adoption of new and exiting developer tools. Focus is on automation and keeping your repo DRY. Whenever justifiable, new and Python-native is preferred over "tried and true".
+The template aspires adoption of new and exciting developer tools. Focus is on automation and keeping your repo DRY. Whenever justifiable, new and Python-native is preferred over "tried and true".
 
 ### Automation
 Automate everything. Banish tedious tasks. Ensure reproducibility. Minimize errors.
